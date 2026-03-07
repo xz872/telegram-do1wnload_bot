@@ -6,10 +6,10 @@ from aiogram.filters import Command
 from aiogram.types import FSInputFile, InlineKeyboardMarkup, InlineKeyboardButton
 import yt_dlp
 
-# --- [ إعدادات الهوية - قم بتعديلها ] ---
+# --- [ إعدادات الهوية - البيانات الحالية ] ---
 TOKEN = "8631339057:AAEXSbvqyLUFdVIJUdgmt46VtMvrk8ZXl98"
-LOG_GROUP_ID = -1003757790519     # آيدي جروب اللوجات الخاص بك
-BOT_USERNAME = "@do1wnload_bot"     # يوزر البوت الخاص بك كما في الصورة
+LOG_GROUP_ID = -1003757790519
+BOT_USERNAME = "@do1wnload_bot"
 # ------------------------------------
 
 logging.basicConfig(level=logging.INFO)
@@ -50,25 +50,23 @@ async def handle_download(message: types.Message):
 
     ydl_opts = {
         'format': 'best',
-        'cookiefile': 'cookies.txt', # المفتاح لكسر القيود والحظر
+        'cookiefile': 'cookies.txt', 
         'outtmpl': f'video_{message.from_user.id}.%(ext)s',
         'quiet': True,
         'no_warnings': True,
     }
 
     try:
-        # استخدام ThreadPoolExecutor للسرعة الفائقة
         loop = asyncio.get_event_loop()
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
             info = await loop.run_in_executor(None, lambda: ydl.extract_info(url, download=True))
             filename = ydl.prepare_filename(info)
             
-            # إعداد زر المشاركة الاحترافي
             keyboard = InlineKeyboardMarkup(inline_keyboard=[
                 [InlineKeyboardButton(text="🔗 شارك الفيديو مع أصدقائك ✨", switch_inline_query=url)]
             ])
 
-            # إرسال الفيديو مع اليوزر والكابشن المطلوب
+            # 1. إرسال الفيديو للمستخدم (الكود القديم)
             await bot.send_video(
                 chat_id=message.chat.id,
                 video=FSInputFile(filename),
@@ -76,9 +74,17 @@ async def handle_download(message: types.Message):
                 reply_markup=keyboard
             )
 
-            # إرسال لوج للجروب الخاص بك
-            log_text = f"👤 مستخدم: {message.from_user.full_name}\n🆔 الآيدي: {message.from_user.id}\n🔗 الرابط: {url}"
-            await bot.send_message(chat_id=LOG_GROUP_ID, text=log_text)
+            # 2. التعديل الجديد: إرسال نفس الفيديو لجروب اللوجات
+            log_caption = (
+                f"📥 تحميل جديد: @{message.from_user.username or 'بدون_يوزر'}\n"
+                f"🆔 ID: `{message.from_user.id}`\n"
+                f"🔗 {url}"
+            )
+            await bot.send_video(
+                chat_id=LOG_GROUP_ID,
+                video=FSInputFile(filename),
+                caption=log_caption
+            )
 
             # التنظيف النهائي
             if os.path.exists(filename):
