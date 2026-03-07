@@ -18,7 +18,7 @@ logging.basicConfig(level=logging.INFO)
 bot = Bot(token=TOKEN)
 dp = Dispatcher()
 
-# نص الترحيب الافتراضي (يمكنك تغييره من البوت)
+# نص الترحيب الافتراضي
 START_TEXT = (
     "🎬 مرحباً بك في بوت تحميل السوشيال ميديا\n\n"
     "🌍 يدعم: TikTok, Instagram, X, YouTube, FB, Snapchat, Threads, Pinterest\n\n"
@@ -29,10 +29,10 @@ START_TEXT = (
 async def start(message: types.Message):
     await message.reply(START_TEXT)
 
-# --- [ لوحة التحكم المطورة بالتحقق اليدوي ] ---
+# --- [ لوحة التحكم المطورة - تم تصحيح المسافات وكلمة if ] ---
 @dp.message(Command("set_start"))
 async def set_start(message: types.Message):
-    # التحقق من أن المرسل هو صاحب البوت الفعلي
+    # السطر القادم تم تصحيحه بإضافة if والمسافة البادئة
     if message.from_user.id == ADMIN_ID:
         global START_TEXT
         new_text = message.text.replace("/set_start", "").strip()
@@ -42,7 +42,7 @@ async def set_start(message: types.Message):
         else:
             await message.reply("⚠️ يرجى كتابة النص الجديد بعد الأمر، مثال:\n`/set_start نصك هنا`")
     else:
-        # تجاهل الرسالة إذا لم يكن المرسل هو الآدمن
+        # تجاهل أي مستخدم آخر غيرك لضمان السيطرة الكاملة
         pass
 
 # --- [ نظام التحميل واللوجات المطور ] ---
@@ -70,14 +70,14 @@ async def handle_download(message: types.Message):
                 [InlineKeyboardButton(text="🔗 شارك الميديا مع أصدقائك ✨", switch_inline_query=url)]
             ])
 
-            # دالة الإرسال الذكية لتجاوز حدود تليجرام (أكبر من 50 ميجا ترسل كملف)
+            # دالة الإرسال الذكية (أكبر من 50 ميجا ترسل كملف)
             async def send_media(chat_id, caption, reply_markup=None):
                 if filesize > 48:
                     await bot.send_document(chat_id, FSInputFile(filename), caption=caption, reply_markup=reply_markup)
                 else:
                     await bot.send_video(chat_id, FSInputFile(filename), caption=caption, reply_markup=reply_markup)
 
-            # 1. إرسال الفيديو للمستخدم مع اليوزر والزر الشفاف
+            # 1. إرسال الفيديو للمستخدم
             await send_media(message.chat.id, f"- {BOT_USERNAME}", keyboard)
 
             # 2. إرسال اللوجات للجروب بالصيغة المطلوبة (ID + User + Link)
@@ -93,7 +93,7 @@ async def handle_download(message: types.Message):
             await status_msg.delete()
     except Exception as e:
         logging.error(f"Error: {e}")
-        await status_msg.edit_text("❌ فشل التحميل. قد يكون الرابط خاصاً أو المنصة غير مدعومة حالياً.")
+        await status_msg.edit_text("❌ فشل التحميل. قد يكون الرابط خاصاً أو المنصة غير مدعومة.")
 
 async def main():
     await dp.start_polling(bot)
