@@ -1,0 +1,53 @@
+# Netscape HTTP Cookie File
+# https://curl.haxx.se/rfc/cookie_spec.html
+# This is a generated file! Do not edit.
+
+.google.com	TRUE	/	TRUE	1788460793	AEC	AaJma5tcfCW6Yv1-hmjTrK6zECReoI9pfe7E3PHEjZHibIr4-6NWzSAqg54
+.google.com	TRUE	/	TRUE	1788460793	__Secure-BUCKET	CPUC
+.google.com	TRUE	/	TRUE	1772909244	__Secure-STRP	AEEP7gJoWM9lAfleFelr2j5yzQ7ewVm09GMbdxBEs3rRmkJO6ZoCh3qN8GhG8zJecLlaeViYSA4MIShZ26re7IdDb9NbFzIM7rwp
+.google.com	TRUE	/	TRUE	1788670439	NID	529=p0Uls5tQOzL4fRq_-J4X8YStRm3jtiySDF1CtJ5x_oW4WkvhRMwC66D3UY_d1hw8yp-NafGuFRxvjnimUEf7qjtIPzMhj1kMExorRiAo8R20kAfTUgu3qxqXQgAlLX_eZpmL-82XVTo-zcgLfxNNyaNXV9yUk8uVtOf96nVPV8inmH4hgdxcFgd-6ZmcmNFPffpqZqiNSY1x0eWaTkeMuP32n5G7Yynh6EhYujFQ6UwdV2x8yDpNqFYR_K60OblHmG5v
+.google.com	TRUE	/verify	TRUE	1788670439	SNID	ALbZf36kiesuQO7s3C9BBCw6T79NCDVi2rRA_KbOt7paXLB2ofmjMoxCTC3cVWPqThw8U1Xtn3PsP1agGzw6ovSRFW5A_53-kQ
+.instagram.com	TRUE	/	TRUE	1807468955	datr	m3GsaT7IjpSBKA812dlLPcRJ
+.instagram.com	TRUE	/	TRUE	1804444955	ig_did	8CB330D4-BD2C-42E1-86AD-0F7A28BC133A
+.instagram.com	TRUE	/	TRUE	1807468958	mid	aaxxmwABAAEF133MYGiIMt65_lbv
+.instagram.com	TRUE	/	TRUE	1807469410	ps_l	1
+.instagram.com	TRUE	/	TRUE	1807469410	ps_n	1
+.instagram.com	TRUE	/	TRUE	1804445576	sessionid	48665690621%3AWJzOf0MdwrcKQg%3A27%3AAYiCyJWSINTtJMpBNldWH0YIznKiy7-cb_QMPrJ7Nw
+.instagram.com	TRUE	/	TRUE	1773514385	wd	396x722
+.instagram.com	TRUE	/	TRUE	1773514385	dpr	2.727272727272727
+.instagram.com	TRUE	/	TRUE	1807469632	csrftoken	uRAojlpYLR9OpwSNnnv1S5QsPZGJsZlh
+.instagram.com	TRUE	/	TRUE	0	rur	"RVA\05448665690621\0541804445632:01fe91da03dd1bca5c8281f0a3ba9f1a4449e5e5bffe7140c980e840bef99db7673e74a8"
+.instagram.com	TRUE	/	TRUE	1780685632	ds_user_id	48665690621
+support.mozilla.org	FALSE	/	TRUE	1775278551	session_id	fgm5kqz6ron9opgj578yyna0sf0mh9tw
+support.mozilla.org	FALSE	/	TRUE	1804308951	csrftoken	VDQFNb87nQM4m9yrvzI3rPH5lfvVjeIG
+.x.com	TRUE	/	TRUE	1835929441	guest_id	v1%3A177285744137890564
+.x.com	TRUE	/	TRUE	1772866441	gt	2030137368372503032
+.x.com	TRUE	/	TRUE	1835931228	personalization_id	"v1_5QD2/CzwJjWCUqtsXT534w=="
+x.com	FALSE	/	FALSE	1788411241	g_state	{"i_l":1,"i_ll":1772859241087,"i_b":"TIgIpZTc9OrdUNfghmnI2oKkQRs/x1CoZ+kCEIKnGNM","i_e":{"enable_itp_optimization":0},"i_p":1772864662964}
+.x.com	TRUE	/	TRUE	1820120057	kdt	6XCrlVrlFYbBMnrauiMfqe7Wo79J6v8bjWWQoTjW
+.x.com	TRUE	/	TRUE	1930539257	auth_token	cb0a777548cf10117ccac9dfc73cb6537744024c
+.x.com	TRUE	/	TRUE	1930539258	ct0	a686c3cf830094a2054af7cf53d42db2143bfac4ce8b56ab7a1ce532f2dc4ad5eebad0b0925f05a1be9d35eef1a985ba83d5f31ca5d159bfb03959670c2eb3dbdcc309f58acdd00bccb88d6f4d91140f
+x.com	FALSE	/	FALSE	0	lang	ar
+.x.com	TRUE	/	TRUE	1835982547	guest_id_ads	v1%3A177285744137890564
+.x.com	TRUE	/	TRUE	1835982547	guest_id_marketing	v1%3A177285744137890564
+.x.com	TRUE	/	TRUE	1772912347	__cf_bm	9sj8wADV3Wo6J_0rS92F3GaxXHvuCLWzBP2IyrEQjVY-1772910547.019866-1.0.1.1-TlOG3E_qx6k.BRSCwOWbA2wr_xvJ7khtyF7.mAn7L29Rcb7NTMfaUU5z9zp4hJyps_PUvN6LHkGvt12EmJbreiwpoet_1.cq3WvV_6Ue_YN1nFg1iuhTTqksTrfht42s
+.x.com	TRUE	/	FALSE	1807470548	__cuid	d93aa1868f194209bbf4e75b8b66f286
+.x.com	TRUE	/	TRUE	1804446552	twid	u%3D1924378004278423552
+.facebook.com	TRUE	/	TRUE	1807469894	datr	RnWsac4V41FtDmc-l1rvGxPg
+.facebook.com	TRUE	/	TRUE	0	m_pixel_ratio	1
+.facebook.com	TRUE	/	TRUE	0	wd	396x880
+.facebook.com	TRUE	/	TRUE	1804445925	c_user	100021246990974
+.facebook.com	TRUE	/	TRUE	1807469925	sb	R3WsaUlwSp2DQdT6IV_SzchY
+.facebook.com	TRUE	/	TRUE	1804445925	xs	32%3AQN9fP3tTurUeeg%3A2%3A1772909923%3A-1%3A-1
+.facebook.com	TRUE	/login/device-based/	TRUE	1780685929	dbln	%7B%22100021246990974%22%3A%22Ez2AWijR%22%7D
+.facebook.com	TRUE	/	TRUE	1780685929	fr	0q4p25TEjWRshwOBC.AWdeLo3RYzbq6YnXIqmIBicsqZm3oOzQ6QgV9Rf0WQ2tkirfLmk.BprHQa..AAA.0.0.BprHVp.AWceAjoLbf5HvVPWVNyfDSWvtfQ
+.facebook.com	TRUE	/	TRUE	1773514729	locale	ar_AR
+.facebook.com	TRUE	/	TRUE	1807469929	pas	100021246990974%3AOCiWOfzlYB
+.facebook.com	TRUE	/	TRUE	1780685930	wl_cbv	v2%3Bclient_version%3A3106%3Btimestamp%3A1772909929
+.facebook.com	TRUE	/	TRUE	1804445931	fbl_st	100429795%3BT%3A29548498
+.facebook.com	TRUE	/	TRUE	1778093931	vpd	v1%3B716x393x2.727272727272727
+.twitter.com	TRUE	/	TRUE	1835931240	guest_id_marketing	v1%3A177285924043378573
+.twitter.com	TRUE	/	TRUE	1835931240	guest_id_ads	v1%3A177285924043378573
+.twitter.com	TRUE	/	TRUE	1835931240	personalization_id	"v1_tCNP3XLif2SNJV3Upv9gVw=="
+.twitter.com	TRUE	/	TRUE	1835931240	guest_id	v1%3A177285924043378573
+.twitter.com	TRUE	/	TRUE	1772861040	__cf_bm	3TPooES9jPqREktoBmkuS6ph2PE8QpUtMOqZ0hS51iA-1772859240.3775876-1.0.1.1-RULar1DwkWIMeaPEcQjtG7Ils0ismaVK.LOoMrVZcIOdU0qjeKyco3lqofIvupBMYEdXY9grRETvXABQGVlNu.3b2hx_EUNL5YGIawWAw_7TE2nCBj.t6KrzQN71Yyda
